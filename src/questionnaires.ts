@@ -9,11 +9,7 @@ const questionnaires: Questionnaire[] = [
     data: [
       {
         language: "EN",
-        scales: [{ name: "Usability", cronbachsAlpha: 0.911 }],
-        participantDetails: {
-          n: 2324,
-          type: ["unspecified"],
-        },
+        scales: [{ name: "Usability" }],
       },
     ],
     metadata: {
@@ -36,9 +32,6 @@ const questionnaires: Questionnaire[] = [
         },
       ],
     },
-    notes: [
-      'Cronbach\'s alpha is taken from a slightly adopted version based on the paper "An Empirical Evaluation of the System Usability Scale" since the original paper does not report it.',
-    ],
   },
   {
     name: "User Experience Questionnaire",
@@ -47,19 +40,15 @@ const questionnaires: Questionnaire[] = [
       {
         language: "EN",
         scales: [
-          { name: "Attractiveness", cronbachsAlpha: 0.86 },
-          { name: "Perspicuity", cronbachsAlpha: 0.71 },
-          { name: "Efficiency", cronbachsAlpha: 0.79 },
-          { name: "Dependability", cronbachsAlpha: 0.69 },
-          { name: "Stimulation", cronbachsAlpha: 0.88 },
-          { name: "Novelty", cronbachsAlpha: 0.84 },
+          { name: "Attractiveness" },
+          { name: "Perspicuity" },
+          { name: "Efficiency" },
+          { name: "Dependability" },
+          { name: "Stimulation" },
+          { name: "Novelty" },
           { name: "Hedonic" },
           { name: "Pragmatic" },
         ],
-        participantDetails: {
-          n: 21,
-          type: ["Online recruitment"],
-        },
       },
     ],
     metadata: {
@@ -122,9 +111,6 @@ const questionnaires: Questionnaire[] = [
         },
       ],
     },
-    notes: [
-      "The reported Cronbach's alpha values are from the original paper. The provided evaluation Excel sheet might report more up to date numbers.",
-    ],
   },
   {
     name: "User Experience Questionnaire - Short",
@@ -259,35 +245,11 @@ const questionnaires: Questionnaire[] = [
       {
         language: "EN",
         scales: [
-          { name: "Neg. Situation of Interaction" },
-          { name: "Neg. Social Influence" },
-          { name: "Neg. Emotions in Interaction" },
+          { name: "Comfort" },
+          { name: "Trust" },
+          { name: "Acceptance" },
         ],
       },
-      {
-        language: "JP",
-        scales: [
-          {
-            name: "Neg. Situation of Interaction",
-            cronbachsAlpha: 0.75,
-          },
-          {
-            name: "Neg. Social Influence",
-            cronbachsAlpha: 0.782,
-          },
-          {
-            name: "Neg. Emotions in Interaction",
-            cronbachsAlpha: 0.648,
-          },
-        ],
-        participantDetails: {
-          n: 240,
-          type: ["Japan University Members"],
-        },
-      },
-    ],
-    notes: [
-      'The subscales names were abbreviated as follow: "Neg. att. t. situations of interaction with robots"  → Neg. Situation of Interaction; "Neg. att. t. the social influence of robots" → Neg. Social Influence; "Neg. att. t. emotions in interaction with robots" → Neg. Emotions in Interaction',
     ],
     metadata: {
       time: [Time.PostStudy],
@@ -310,6 +272,9 @@ const questionnaires: Questionnaire[] = [
         },
       ],
     },
+    notes: [
+      "The scales are usually negative for this questionnaire, but for filtering, we invert them for better visibility.",
+    ],
   },
   {
     name: "Attitudes toward Cooperative Industrial Robots Questionnaire",
@@ -317,7 +282,7 @@ const questionnaires: Questionnaire[] = [
     data: [
       {
         language: "EN",
-        scales: [{ name: "Social" }, { name: "Task" }, { name: "Affect" }],
+        scales: [{ name: "Social", omega: {value: 0.84, type: "McDonald" }}, { name: "Task", omega: {value: 0.81, type: "McDonald" } }, { name: "Affect-Behavior", omega: {value: 0.83, type: "McDonald" } }],
       },
     ],
     metadata: {
